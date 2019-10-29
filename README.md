@@ -4,11 +4,11 @@
 
 ## Table of contents
 - [Abstract](#abstract)
-- [1.Introduction](#1.Introduction)
-- [2. Methods](#methods)
-  * [2.1 Gale-Shapley Algorithm](#galeShapley)
-  * [2.2 Generating Random Examples](#randomExamples)
-  * [2.3 Quantify Satisfaction in Matches](#quantifySatisfaction)
+- [Introduction](#Introduction)
+- [Methods](#methods)
+  * [Gale-Shapley Algorithm](#Gale-Shapley Algorithm)
+  * [Generating Random Examples](#Generating Random Examples)
+  * [Quantify Satisfaction in Matches](#Quantify Satisfaction in Matches)
       + [2.3.1 Score Calculations](#scoreCalculations)
       + [2.3.2 Top 20% (“r”) of ranks are rewarded](#topTwenty)
       + [2.3.3 Penalty Scoring](#penalty)
