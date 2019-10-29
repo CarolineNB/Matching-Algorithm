@@ -167,7 +167,7 @@ original score from this new ideal score. However, for the students we can still
 algorithm, wherein the number of students are equal to the number of internships “n”. Using the
 randomizer referred to in 2.2 we can generate a list of internship rankings and student rankings.
 Also using the scoring algorithm in 2.3.1, we can test the satisfactory rates for both the projects
-and the employees. We implemented this Gale-Shapley modification into Python (See[Appendix C](AppendixC.py)).
+and the employees. We implemented this Gale-Shapley modification into Python (See [Appendix C](AppendixC.py)).
  The following table shows the average satisfaction rates of 30 rounds of different data
 sets. The “n” value, or the amount of internships and students, increases by a factor of two every
 ten rounds to compare the effect of larger data on the basic Gale-Shapley algorithm. Average % 
