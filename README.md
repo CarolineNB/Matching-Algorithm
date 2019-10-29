@@ -311,7 +311,7 @@ Tullis, T. (2014, December 05). How Game Theory Helped Improve New York City's H
  School Application Process. Retrieved August 11, 2017, from https://www.nytimes.com/
  2014/12/07/nyregion/how-game-theory-helped-improve-new-york-city-high-schoolapplication-process.html 
  
- ## 7. Apendix
+ ## 7. Appendix
 
 
  
