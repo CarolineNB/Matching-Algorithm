@@ -71,9 +71,9 @@ generates the “best” outcomes for either side. It creates stable pairs, guar
 matched, and makes it so that either element is assigned to its best possible match. 
        
 
-## 2. Methods
+## Methods
 
-### 2.1 Gale-Shapley Algorithm
+### Gale-Shapley Algorithm
   The basic Gale-Shapley algorithm creates stable matches for two sets with the same
 number of elements. The algorithm takes inputs of each individuals’ preference rankings to
 create the matchings. Consider the following example: 
@@ -103,7 +103,7 @@ with an internship 2. All pairings will be stable (refer to definition of stable
 implemented the Gale-Shapley algorithm in Python (See Appendix A). 
 
 
-### 2.2 Generating Random Examples
+### Generating Random Examples
   Our purpose, and main motivation of generating random examples to be used in the GaleShapley code, 
 is to efficiently create sample sets of realistic data that is manually hard togenerate. Given 
 two sets A and B, we generate a randomized preference list of each element A by simply creating
@@ -116,7 +116,7 @@ the satisfactory rates of the participants in the GaleShapley algorithm. Later m
 basic Gale-Shapley algorithm will also call for its own modifications of the random example generator. We
 implemented this randomizing algorithm in Python (See Appendix B). 
 
-### 2.3 Quantify Satisfaction in Matches
+### Quantify Satisfaction in Matches
   To evaluate the effectiveness of the Gale Shapley algorithm, we must create a scoring
 guide, or a metric, that will calculate the satisfaction rate of each match. There are several
 different scoring methods that we consider:
@@ -128,7 +128,7 @@ different scoring methods that we consider:
      lastly Claire was matched by the algorithm with her first ranked internship, Computer
      Science. 
 
-#### 2.3.1 Score Calculations
+#### Score Calculations
   In this metric, Alyssa’s and Claire’s match will be awarded 30 points since they had been
 matched with the internship that they had ranked first preferred. Brittney’s match would be
 awarded 10 points because she had been matched with the internship that she had in 3rd place. In
