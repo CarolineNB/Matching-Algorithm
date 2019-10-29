@@ -94,7 +94,7 @@ paired with a student.
 8. The algorithm returns a list of matched internships to students.
 The results of the Gale-Shapley algorithm guarantees two things: 1. All students will be matched
 with an internship 2. All pairings will be stable (refer to definition of stable match). We
-implemented the Gale-Shapley algorithm in Python (See Appendix A). 
+implemented the Gale-Shapley algorithm in Python (See [Appendix A](AppendixA.py)). 
 
 
 ### Generating Random Examples
@@ -108,7 +108,7 @@ shuffled list of students named from “employee1” to “employee20” and int
 By using these random examples, we can test multiple scoring methods to find the best way to measure
 the satisfactory rates of the participants in the GaleShapley algorithm. Later modifications of the
 basic Gale-Shapley algorithm will also call for its own modifications of the random example generator. We
-implemented this randomizing algorithm in Python (See Appendix B). 
+implemented this randomizing algorithm in Python (See [Appendix B](AppendixB.py)). 
 
 ### Quantify Satisfaction in Matches
   To evaluate the effectiveness of the Gale Shapley algorithm, we must create a scoring
@@ -138,7 +138,7 @@ algorithm matched the Computer Science internship with it’s first ranked stude
 match for the internship would be rewarded 30 points, etc. Again, dividing the overall match
 score of the internships by the ideal overall match score will calculate the internship percent
 satisfaction.
- Both scorings were implemented in Python (See Appendix C)
+ Both scorings were implemented in Python (See [Appendix C](AppendixC.py))
 
 #### Top Percent of Ranks Rewarded
  This metric rewards the matches that were within the top 20% of total preferences. Lets
@@ -146,7 +146,7 @@ make it so that in example 3, only the first ranked matches will be awarded. Thi
 Alyssa’s and Claire’s match will still be awarded 30 points while Brittney’s match is rewarded 0
 points.
  The reason for this metric is to reveal the percent of the students who were matched with
-the top 20% of their preferences. This metric was implemented in Python (See Appendix D). 
+the top 20% of their preferences. This metric was implemented in Python (See [Appendix D](AppendixD.py)). 
 
 #### Penalty Scoring
  Only applies to unmatched students to internships where for each unmatched student
@@ -166,8 +166,7 @@ original score from this new ideal score. However, for the students we can still
 algorithm, wherein the number of students are equal to the number of internships “n”. Using the
 randomizer referred to in 2.2 we can generate a list of internship rankings and student rankings.
 Also using the scoring algorithm in 2.3.1, we can test the satisfactory rates for both the projects
-and the employees. We implemented this Gale-Shapley modification into Python (See Appendix
-C).
+and the employees. We implemented this Gale-Shapley modification into Python (See[Appendix C](AppendixC.py)).
  The following table shows the average satisfaction rates of 30 rounds of different data
 sets. The “n” value, or the amount of internships and students, increases by a factor of two every
 ten rounds to compare the effect of larger data on the basic Gale-Shapley algorithm. Average % 
@@ -200,7 +199,7 @@ agreement with Table 1.
  This is a modification of Gale Shapley algorithm that uses a more realistic data set where
 the amount of students and internships differ. In this case, the internships have a certain capacity
 size allowing multiple students to be accepted into a single internship. We implemented this
-Gale-Shapley modification into Python (See Appendix E). 
+Gale-Shapley modification into Python (See [Appendix E](AppendixE.py)). 
 
  Example 4: Four students Alison, Brittney, Claire, and Diana are to be paired with
    two internships, Math and Science. Each internship can accept 2 students. Again, all
@@ -235,7 +234,7 @@ unmatched.
  In example 4, let’s say that Ellie also decided to apply for both the Math and Science
 internship. The capacity for each internship is still two, but now the numbers of students
 increased to five. In any matching that were to occur, there will always return a student who is
-unmatched. We implemented this Gale-Shapley modification into Python (See Appendix F).
+unmatched. We implemented this Gale-Shapley modification into Python (See [Appendix F](AppendixF.py)).
  In the following table we are evaluating the average % student satisfaction and the
 average % internship satisfaction as the acceptance rate becomes lower and lower where less
 students are matched. While capacity size says the same, the number of students increase making
@@ -254,7 +253,7 @@ highest ranked students.
 preferences but just the top preferred “k” internships. For this particular metric we will be
 incorporating the penalty scoring described in 2.3.3 and using the original 2.3.1 scoring to
 evaluate average satisfaction. We implemented this Gale-Shapley modification into Python (See
-Appendix G).
+[Appendix G](AppendixG.py)).
  The only variable in this algorithm is the “k” value, or the amount of internships each
 student is allowed to list. The amount of students, internships, the capacity size stays the same.
 We are also only evaluating the Student % Satisfaction as well as the percent of students that
