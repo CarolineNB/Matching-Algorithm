@@ -8,11 +8,13 @@ def rankofEmployee(employee, project, employeeRankings, projectRankings, project
  temp = np.ndarray.tolist(projectRankings[projectIndex])
  return temp.index(employee)
 
+
 def galeShapley(employeeNames, projectNumbers, employeeRankings, projectRankings):
  n = len(employeeNames)
  unmatched = employeeNames
  currentProjIndex = n*[0]
  proposals = np.zeros((n, n), dtype=bool)
+ 
  while not not unmatched:
   for i, employee in enumerate(employeeNames):
    project = employeeRankings[i][currentProjIndex[i]]
@@ -20,6 +22,7 @@ def galeShapley(employeeNames, projectNumbers, employeeRankings, projectRankings
    colIndex = rankofEmployee(employee, project, employeeRankings, projectRankings, projectNumbers, employeeNames)
    proposals[projectIndex][colIndex] = True
   matched = []
+  
  for i, project in enumerate(projectNumbers):
   data = proposals[i]
   if any(data):
@@ -28,10 +31,10 @@ def galeShapley(employeeNames, projectNumbers, employeeRankings, projectRankings
    matchedEmployee = projectRankings[i][colIndex]
    matched.append(matchedEmployee)
    unmatched = list(set(employeeNames) - set(matched))
+   
 for i, employee in enumerate(unmatched):
  unmatchedEmployee = employeeNames.index(employee)
  currentProjIndex[unmatchedEmployee] = currentProjIndex[unmatchedEmployee] + 1
- 
  
 match = []
 finalMatch = []
