@@ -8,22 +8,23 @@
 - [Introduction](#Introduction)
 - [Methods](#methods)
   * [Gale Shapley Algorithm](#Gale-Shapley-Algorithm)
-  * [Generating Random Examples](#Generating)
-  * [Quantify Satisfaction in Matches](#Quantify)
-      + [2.3.1 Score Calculations](#scoreCalculations)
-      + [2.3.2 Top 20% (“r”) of ranks are rewarded](#topTwenty)
-      + [2.3.3 Penalty Scoring](#penalty)
-      + [2.3.4 Difference in Amounts](#difference)
-- [3. Results and Discussion](#results)
-  * [3.1 Matching Employees to Projects](#employeeToProjects)
+  * [Generating Random Examples](#Generating-Random-Examples)
+  * [Quantify Satisfaction in Matches](#Quantify-Satisfaction-in-Matches)
+      + [Score Calculations](#Score-Calculations)
+      + [Top Percent of Ranks Rewarded](#Top-Percent-of-Ranks-Rewarded)
+      + [Penalty Scoring](#Penalty-Scoring)
+      + [Difference in Amounts](#Difference-in-Amounts)
+- [Results and Discussion](#Results-and-Discussion)
+  * [Matching Employees to Projects](#Matching-Employees-to-Projects)
+  * [Matching Students to Internships](#Matching-Students-to-Internships)
+  * [Internships Have a Capacity Where Students are Unmatched](#Internships-Have-a-Capacity-Where-Students-are-Unmatched)
+  * [Students Listed only their Top Preferences](#Students-Listed-only-their-Top-Preferences)
+- [Conclusion](#Conclusion)
+- [Acknowledgements](#Acknowledgements)
+- [References](#References)
+- [Appendix](#Appendix)
 
 
-- [3. Results and Discussion](#heading-1)
-  * [Sub-heading](#sub-heading-1)
-    + [2.3.4 Difference in Amounts](#difference)
-- [Heading](#heading-2)
-  * [Sub-heading](#sub-heading-2)
-    + [Sub-sub-heading](#sub-sub-heading-2)
     
 ## Abstract
 The motivation of this project is to generate an algorithm that can efficiently
@@ -139,7 +140,7 @@ score of the internships by the ideal overall match score will calculate the int
 satisfaction.
  Both scorings were implemented in Python (See Appendix C)
 
-#### 2.3.2 Top 20% (“r”) of ranks are rewarded
+#### Top Percent of Ranks Rewarded
  This metric rewards the matches that were within the top 20% of total preferences. Lets
 make it so that in example 3, only the first ranked matches will be awarded. This makes it so that
 Alyssa’s and Claire’s match will still be awarded 30 points while Brittney’s match is rewarded 0
@@ -147,11 +148,11 @@ points.
  The reason for this metric is to reveal the percent of the students who were matched with
 the top 20% of their preferences. This metric was implemented in Python (See Appendix D). 
 
-#### 2.3.3 Penalty Scoring
+#### Penalty Scoring
  Only applies to unmatched students to internships where for each unmatched student
 there would be a 10 point penalty for the Average Student % Satisfactory Score. 
 
-#### 2.3.4 Difference in Amounts 
+#### Difference in Amounts 
   In this case, since there are more students than the internships, we cant use the “ideal
 scoring” for the internships where we multiply the the top score for the internship match by the
 capacity size. We would have to add up the total “r” ranks of the internship, since ideally an
@@ -159,8 +160,8 @@ internship would receive matchings from the top “r” ranks. From there we aga
 original score from this new ideal score. However, for the students we can still use scoring 2.3.1. 
 
 
-## 3. Results and Discussion
-### 3.1 Matching Employees to Projects 
+## Results and Discussion
+### Matching Employees to Projects 
   In this data set we are testing the satisfactory rates of the standard Gale Shapley
 algorithm, wherein the number of students are equal to the number of internships “n”. Using the
 randomizer referred to in 2.2 we can generate a list of internship rankings and student rankings.
@@ -195,7 +196,7 @@ awarding only the top “r” matches, giving all other matches zero points. Als
 Satisfaction increases by two fold and internship satisfaction stays at about 68%-69%, in
 agreement with Table 1. 
 
-### 3.2 Matching “n” Students to “m” Internships 
+### Matching Students to Internships 
  This is a modification of Gale Shapley algorithm that uses a more realistic data set where
 the amount of students and internships differ. In this case, the internships have a certain capacity
 size allowing multiple students to be accepted into a single internship. We implemented this
@@ -227,7 +228,7 @@ the data set proposing. This discrepancy is probably due to the fact that as the
 more amount of students than internships, making the internships have the room to become more
 picky with the students that are accepted.
 
-### 3.3 “m” Internships Have a Capacity Where Students are Unmatched 
+### Internships Have a Capacity Where Students are Unmatched 
  Even more realistic modification of the algorithm is when internships have a certain
 acceptance rate, or a maximum capacity, making it so that some students will be returned
 unmatched. 
@@ -248,7 +249,7 @@ increases until almost 100% satisfaction. This is because as the amount of stude
 the internships increase, so does the pickiness of the internships since they can reject all but the
 highest ranked students. 
 
-### 3.4 Students Listed only their Top “k” Preferences of “n” Internships
+### Students Listed only their Top Preferences
  In the case that there are numerous internships, students shouldn’t have to list all their
 preferences but just the top preferred “k” internships. For this particular metric we will be
 incorporating the penalty scoring described in 2.3.3 and using the original 2.3.1 scoring to
@@ -267,7 +268,7 @@ decreases since there are less amount of rankings for the matching algorithm to 
 However, student satisfaction seems to go higher even though there is a penalty as well as more
 students that are returning unmatched. 
 
-## 4. Conclusion
+## Conclusion
  This project surrounded the creation of the Gale Shapley algorithm as well as its
 modification algorithms. It takes into consideration that stability doesn’t necessarily mean
 satisfactory, and generates randomizing algorithms as well as metrics to see the satisfactory rates
@@ -280,11 +281,11 @@ from New York City public high schools, instead of depending on the randomizing 
 our data sets. Finally in the future we hope to explore or generate an even more efficient or
 satisfactory stable matching algorithm. 
 
-## 5. Acknowledgements 
+## Acknowledgements 
  Huge thanks to Professor Mutiara Sondjaja who made this project possible as well as the NYU Courant
  Institute of Mathematics for this oppurtunity.
  
-## 6. References
+## References
 
 Austin, D. (2015, March). The Stable Marriage Problem and School Choice. Retrieved August
  11, 2017, from http://www.ams.org/samplings/feature-column/fc-2015-03
@@ -304,7 +305,7 @@ Tullis, T. (2014, December 05). How Game Theory Helped Improve New York City's H
  School Application Process. Retrieved August 11, 2017, from https://www.nytimes.com/
  2014/12/07/nyregion/how-game-theory-helped-improve-new-york-city-high-schoolapplication-process.html 
  
- ## 7. Appendix
+ ## Appendix
 [Appendix A.](AppendixA.py)
 
 [Appendix B.](AppendixB.py)
