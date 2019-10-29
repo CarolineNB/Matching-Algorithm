@@ -49,7 +49,7 @@ would prefer to be paired with another element in a different pair.
    student A to student B, and vice versa student A prefers internship 2 to internship 1, and
    student B prefers internship 1 to internship A. In this, the original matching is referred to
    as unstable.
-   ![alt text](https://i.ibb.co/nr4jn9H/Capture.png) 
+   ![alt text](https://i.ibb.co/TgBSPHC/Capture.png) 
        
 The main example: The running example in this paper will be matching students up with
 internships. The amount of students and capacity of the internship will change throughout the
