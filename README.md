@@ -138,7 +138,8 @@ algorithm matched the Computer Science internship with it’s first ranked stude
 match for the internship would be rewarded 30 points, etc. Again, dividing the overall match
 score of the internships by the ideal overall match score will calculate the internship percent
 satisfaction.
- Both scorings were implemented in Python (See [Appendix C](AppendixC.py))
+ Both scorings were implemented in Python (See [Appendix C](AppendixC.py)).
+ 
 
 #### Top Percent of Ranks Rewarded
  This metric rewards the matches that were within the top 20% of total preferences. Lets
