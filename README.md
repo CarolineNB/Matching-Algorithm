@@ -4,7 +4,7 @@
 
 ## Table of contents
 - [Abstract](#abstract)
-- [Introduction](#intro)
+- [Introduction](#introduction)
 - [2. Methods](#methods)
   * [2.1 Gale-Shapley Algorithm](#galeShapley)
   * [2.2 Generating Random Examples](#randomExamples)
