@@ -1,4 +1,5 @@
 # Stable Matching Algorithm and its Applications 
+### Caroline Barker
 ### NYU Courant Institute of Mathematics
 ### August 11, 2017
 
