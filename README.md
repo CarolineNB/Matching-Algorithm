@@ -304,6 +304,7 @@ Tullis, T. (2014, December 05). How Game Theory Helped Improve New York City's H
  
  ## 7. Appendix
 [Appendix A.](AppendixA.py)
+
 [Appendix B.](AppendixB.py)
 [Appendix C.](AppendixC.py)
 [Appendix D.](AppendixD.py)
