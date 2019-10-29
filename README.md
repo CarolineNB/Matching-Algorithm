@@ -4,7 +4,7 @@
 
 ## Table of contents
 - [Abstract](#abstract)
-- [Introduction](#introduction)
+- [Introduction](#1.introduction)
 - [2. Methods](#methods)
   * [2.1 Gale-Shapley Algorithm](#galeShapley)
   * [2.2 Generating Random Examples](#randomExamples)
@@ -41,7 +41,7 @@ provide for more complex data sets. Also, by generating an algorithm that would 
 quantities of random data as well as a generating a metric, we can test the satisfactory rates of the
 matches returned from the basic Gale-Shapley algorithm and its modified algorithms. 
 
-## Introduction
+## 1.Introduction
 *Definition of Stable Matching*: We say that a matching is stable if neither element in the pair
 would prefer to be paired with another element in a different pair. 
   Example 1: Internship 1 is matched with student A and internship 2 is matched with
