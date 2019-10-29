@@ -24,15 +24,6 @@
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
     
-
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Technologies](#technologies)
-* [Setup](#setup)
-
-
 ## Abstract
 The motivation of this project is to generate an algorithm that can efficiently
 create stable matches between two data sets. Using the basic Gale-Shapley algorithm that
