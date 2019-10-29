@@ -7,7 +7,7 @@
 - [Abstract](#abstract)
 - [Introduction](#Introduction)
 - [Methods](#methods)
-  * [Gale-Shapley Algorithm](#Gale_Shapley)
+  * [Gale Shapley Algorithm](#Gale-Shapley-Algorithm)
   * [Generating Random Examples](#Generating)
   * [Quantify Satisfaction in Matches](#Quantify)
       + [2.3.1 Score Calculations](#scoreCalculations)
@@ -33,7 +33,7 @@ provide for more complex data sets. Also, by generating an algorithm that would 
 quantities of random data as well as a generating a metric, we can test the satisfactory rates of the
 matches returned from the basic Gale-Shapley algorithm and its modified algorithms. 
 
-## 1.Introduction
+## Introduction
 *Definition of Stable Matching*: We say that a matching is stable if neither element in the pair
 would prefer to be paired with another element in a different pair. 
   Example 1: Internship 1 is matched with student A and internship 2 is matched with
@@ -41,6 +41,7 @@ would prefer to be paired with another element in a different pair.
    student A to student B, and vice versa student A prefers internship 2 to internship 1, and
    student B prefers internship 1 to internship A. In this, the original matching is referred to
    as unstable.
+   
    ![alt text](https://i.ibb.co/TgBSPHC/Capture.png) 
        
 The main example: The running example in this paper will be matching students up with
@@ -65,7 +66,7 @@ matched, and makes it so that either element is assigned to its best possible ma
 
 ## Methods
 
-### Gale-Shapley Algorithm
+### Gale Shapley Algorithm
   The basic Gale-Shapley algorithm creates stable matches for two sets with the same
 number of elements. The algorithm takes inputs of each individuals’ preference rankings to
 create the matchings. Consider the following example: 
