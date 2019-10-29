@@ -194,3 +194,125 @@ table. In this set of results we are evaluating the % students given their top �
 internships also given their top “r” choices within the matches.
 
 ![alt text](https://i.ibb.co/nLQF8Tk/Capture.png)
+
+ Like Table 1, we see in Table 2 as the value of “n” increases so does the % students given
+their top “r” and the % internships given their top “r”. However, the values seem to increase
+much more dramatically, and start off much lower than Table 1. This is because this metric is
+awarding only the top “r” matches, giving all other matches zero points. Also, % Student
+Satisfaction increases by two fold and internship satisfaction stays at about 68%-69%, in
+agreement with Table 1. 
+
+### 3.2 Matching “n” Students to “m” Internships 
+ This is a modification of Gale Shapley algorithm that uses a more realistic data set where
+the amount of students and internships differ. In this case, the internships have a certain capacity
+size allowing multiple students to be accepted into a single internship. We implemented this
+Gale-Shapley modification into Python (See Appendix E). 
+
+ Example 4: Four students Alison, Brittney, Claire, and Diana are to be paired with
+   two internships, Math and Science. Each internship can accept 2 students. Again, all
+   students have ranked there most preferred internship to least, and each internship has
+   ranked their most preferred student to least. The algorithm will run until both internships
+   have two students matched to each. 
+   
+ To test the satisfactory rates of these pairings we will use the basic concept of the 2.3.4
+metric to compare average satisfaction rates of both internships and students.
+ In the following table there are a list of “n” values for the students and “m” values for
+the internships. However, throughout the ratio of students to internships stay at 10:1 so the
+resulting satisfaction rates can be compared. In this figure, we are again evaluating Average %
+Student Satisfaction, Average % Internship Satisfaction, and the difference between the two
+percentages. 
+
+![alt text](https://i.ibb.co/WWq1s3M/Capture.png)
+
+ In Table 3, we see that both the average student satisfaction rate and the average
+internship satisfaction rate goes up as the as the amount of students and internships go up.
+However as we look towards the bottom of the table, we see that the difference between the
+students and internship satisfaction rate goes into the negatives. This is because the average %
+internship satisfaction is higher than the average % student satisfaction, disagreeing with our
+previous hypothesis that claims students should have a higher satisfaction rate because they are
+the data set proposing. This discrepancy is probably due to the fact that as there are increasingly
+more amount of students than internships, making the internships have the room to become more
+picky with the students that are accepted.
+
+### 3.3 “m” Internships Have a Capacity Where Students are Unmatched 
+ Even more realistic modification of the algorithm is when internships have a certain
+acceptance rate, or a maximum capacity, making it so that some students will be returned
+unmatched. 
+ In example 4, let’s say that Ellie also decided to apply for both the Math and Science
+internship. The capacity for each internship is still two, but now the numbers of students
+increased to five. In any matching that were to occur, there will always return a student who is
+unmatched. We implemented this Gale-Shapley modification into Python (See Appendix F).
+ In the following table we are evaluating the average % student satisfaction and the
+average % internship satisfaction as the acceptance rate becomes lower and lower where less
+students are matched. While capacity size says the same, the number of students increase making
+it so that the acceptance rate is calculated by by dividing the number of potentially accepted
+students from the total amount of students. 
+
+![alt text](https://i.ibb.co/rkcLch0/Capture.png)
+ As we can see, as soon as the acceptance rate becomes lower than 100%, the average
+student satisfaction dramatically lowers while the average internship satisfaction dramatically
+increases until almost 100% satisfaction. This is because as the amount of students applying to
+the internships increase, so does the pickiness of the internships since they can reject all but the
+highest ranked students. 
+
+### 3.4 Students Listed only their Top “k” Preferences of “n” Internships
+ In the case that there are numerous internships, students shouldn’t have to list all their
+preferences but just the top preferred “k” internships. For this particular metric we will be
+incorporating the penalty scoring described in 2.3.3 and using the original 2.3.1 scoring to
+evaluate average satisfaction. We implemented this Gale-Shapley modification into Python (See
+Appendix G).
+ The only variable in this algorithm is the “k” value, or the amount of internships each
+student is allowed to list. The amount of students, internships, the capacity size stays the same.
+We are also only evaluating the Student % Satisfaction as well as the percent of students that
+return unmatched. In the following table, we are evaluating the effect of decreasing the “k”
+value. 
+
+![alt text](https://i.ibb.co/KXfqJ3d/Capture.png)
+
+ In evaluating Table 5 we see that the % unmatched students increase as the “k” value
+decreases since there are less amount of rankings for the matching algorithm to go off of.
+However, student satisfaction seems to go higher even though there is a penalty as well as more
+students that are returning unmatched. 
+
+## 4. Conclusion
+ This project surrounded the creation of the Gale Shapley algorithm as well as its
+modification algorithms. It takes into consideration that stability doesn’t necessarily mean
+satisfactory, and generates randomizing algorithms as well as metrics to see the satisfactory rates
+of the stable matches. All in all it reinforces the fact that in the basic Gale Shapley algorithm the
+proposing side is more satisfied, and in the modifications, satisfactory rates depend on the data
+sets that are tested.
+ In the future we hope to implement even more modifications such as giving each
+internship their individual capacity size, etc. Also we hope to test realistic data, for example data
+from New York City public high schools, instead of depending on the randomizing algorithm for
+our data sets. Finally in the future we hope to explore or generate an even more efficient or
+satisfactory stable matching algorithm. 
+
+## 5. Acknowledgements 
+ Huge thanks to Professor Mutiara Sondjaja who made this project possible as well as the NYU Courant
+ Institute of Mathematics for this oppurtunity.
+ 
+## 6. References
+
+Austin, D. (2015, March). The Stable Marriage Problem and School Choice. Retrieved August
+ 11, 2017, from http://www.ams.org/samplings/feature-column/fc-2015-03
+
+Gale, D., & Shapley, L. S. (1996, January). College Admissions and the Stability of Marriage.
+ Retrieved from http://www.eecs.harvard.edu/cs286r/courses/fall09/papers/
+ galeshapley.pdf
+
+JohanThe Royal Swedish Academy of Sciences, Stable matching: Theory, evidence, and
+ practical design. (2012). Retrieved from http://www.nobelprize.org/nobel_prizes/
+ economic-sciences/laureates/2012/popular-economicsciences2012.pdf
+
+Stable marriage problem. (2017, July 31). Retrieved from https://en.wikipedia.org/wiki/
+ Stable_marriage_problem
+
+Tullis, T. (2014, December 05). How Game Theory Helped Improve New York City's High
+ School Application Process. Retrieved August 11, 2017, from https://www.nytimes.com/
+ 2014/12/07/nyregion/how-game-theory-helped-improve-new-york-city-high-schoolapplication-process.html 
+ 
+ ## 7. Apendix
+
+
+ 
+ 
